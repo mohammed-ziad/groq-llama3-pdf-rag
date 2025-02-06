@@ -25,7 +25,7 @@ def get_api_key():
 
 def get_inference_api_key():
     try:
-        inference_api_key = os.getenv("INFERENCE_API_KEY", "")
+        inference_api_key = os.getenv("INFERENCE_API_KEY", "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")
 
         return inference_api_key
     except Exception as e:
