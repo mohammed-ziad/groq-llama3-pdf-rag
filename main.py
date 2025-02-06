@@ -29,7 +29,7 @@ groq_api_key = sidebar_api_key_configuration()
 model = sidebar_groq_model_selection()
 
 # --- MAIN PAGE CONFIGURATION ---
-st.title("Mohammed AL-Yaseen ChatBot :robot_face:")
+st.title("Mohammed AL-Yaseen ChatBot")
 # ---- NAVIGATION MENU -----
 selected = option_menu(
     menu_title=None,
