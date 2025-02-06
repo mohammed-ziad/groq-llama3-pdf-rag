@@ -49,8 +49,10 @@ def sidebar_api_key_configuration():
 
 def sidebar_groq_model_selection():
     st.sidebar.subheader("Model Selection")
-    model = st.sidebar.selectbox('Select the Model', ('Llama3-8b-8192', 'Llama3-70b-8192', 'Mixtral-8x7b-32768',
-                                                      'Gemma-7b-it'), label_visibility="collapsed")
+    model = st.sidebar.selectbox('Select the Model', ('distil-whisper-large-v3-en', 'gemma2-9b-it', 'llama-3-3-70b-versatile',
+                                                      'llama-3-1-8b-instant', 'llama-guard-3-8b', 'llama3-70b-8192',
+                                                      'llama3-8b-8192', 'mixtral-8x7b-32768', 'whisper-large-v3',
+                                                      'whisper-large-v3-turbo'), label_visibility="collapsed")
     return model
 
 
