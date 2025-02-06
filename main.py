@@ -29,14 +29,11 @@ groq_api_key = sidebar_api_key_configuration()
 model = sidebar_groq_model_selection()
 
 # --- MAIN PAGE CONFIGURATION ---
-st.title("Doc Chat :robot_face:")
-st.write("*Interrogate Documents :books:, Ignite Insights: AI at Your Service*")
-st.write(':blue[***Powered by Groq AI Inference Technology***]')
-
+st.title("Mohammed AL-Yaseen ChatBot :robot_face:")
 # ---- NAVIGATION MENU -----
 selected = option_menu(
     menu_title=None,
-    options=["Doc Chat", "Reference", "About"],
+    options=["Doc Chat", "Reference"],
     icons=["robot", "bi-file-text-fill", "app"],  # https://icons.getbootstrap.com
     orientation="horizontal",
 )
@@ -92,31 +89,3 @@ if selected == "Reference":
         for i, doc in enumerate(st.session_state.response["context"]):
             with st.expander(f'Reference # {i + 1}'):
                 st.write(doc.page_content)
-
-# ----- SETUP ABOUT MENU ------
-if selected == "About":
-    with st.expander("About this App"):
-        st.markdown(''' This app allows you to chat with your PDF documents. It has following functionality:
-
-    - Allows to chat with multiple PDF documents
-    - Support of Groq AI inference technology 
-    - Display the response context and document reference
-
-        ''')
-    with st.expander("Which Large Language models are supported by this App?"):
-        st.markdown(''' This app supports the following LLMs as supported by Groq:
-
-    - Chat Models -- Groq
-        - Llama3-8b-8192 
-        - Llama3-70b-8192 
-        - Mixtral-8x7b-32768
-        - Gemma-7b-it
-        ''')
-
-    with st.expander("Which library is used for vectorstore?"):
-        st.markdown(''' This app supports the FAISS for AI similarity search and vectorstore:
-        ''')
-
-    with st.expander("Whom to contact regarding this app?"):
-        st.markdown(''' Contact [Sree Narayanan](sreeaadhi07@gmail.com)
-        ''')
